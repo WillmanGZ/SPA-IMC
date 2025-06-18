@@ -17,16 +17,11 @@ execBtn.addEventListener("click", (e) => {
   if (height < 0.3 || height > 2.5) {
     alert("Altura invalida, por favor digita una altura válida");
 
-    heightInput.value = null;
-    weightInput.value = null;
+    resetInputs();
     return;
-  }
-
-  if (weight < 0 || weight > 1000) {
+  } else if (weight < 0 || weight > 1000) {
     alert("Peso invalido, por favor digita un peso válido");
-
-    heightInput.value = null;
-    weightInput.value = null;
+    resetInputs();
     return;
   }
 
@@ -45,3 +40,9 @@ execBtn.addEventListener("click", (e) => {
   //Mostramos en pantalla el resultado
   imcText.textContent = `Tu imc es ${imc.toFixed(1)}, tu estado es: ${state}`;
 });
+
+//Funcion para resetear los inputs
+function resetInputs() {
+  heightInput.value = null;
+  weightInput.value = null;
+}
