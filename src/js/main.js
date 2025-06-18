@@ -43,5 +43,5 @@ execBtn.addEventListener("click", (e) => {
   else if (imc > 39.9) state = "Obesidad grado 3";
 
   //Mostramos en pantalla el resultado
-  imcText.textContent = `Tu imc es ${imc}, tu estado es: ${state}`;
+  imcText.textContent = `Tu imc es ${imc.toFixed(1)}, tu estado es: ${state}`;
 });
